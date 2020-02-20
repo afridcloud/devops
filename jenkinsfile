@@ -25,6 +25,8 @@ pipeline {
             stage('install') {
                 steps {
                         sh "mvn clean install"
+                        currentBuild.displayName = "The name."
+                        currentBuild.description = "The best description."
                     }
             }
         }
